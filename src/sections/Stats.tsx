@@ -59,7 +59,7 @@ export function Stats() {
               {it.value}
             </text>
           </svg>
-          <div className="text-[#353535] dark:text-gray-100 mt-1 font-pt-sans-400 text-lg">
+          <div className="text-[#353535] dark:text-gray-100 mt-1 font-pt-sans-400 text-lg whitespace-nowrap text-center">
             {it.label}
           </div>
         </motion.div>
