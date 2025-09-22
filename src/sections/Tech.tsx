@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion"; // Corrected import
 import { ChevronDown } from "lucide-react";
 
 const tech = [
-  { name: "Android", color: "bg-brand-green", icon: "/android.svg", details: "Build amazing mobile apps with Android." },
-  { name: "Flutter", color: "bg-brand-blue", icon: "/flutter.svg", details: "Cross-platform UI toolkit for beautiful apps." },
-  { name: "Cloud", color: "bg-brand-red", icon: "/cloud.svg", details: "Powerful cloud computing & infrastructure." },
-  { name: "React", color: "bg-brand-blue", icon: "/react.svg", details: "JavaScript library for building UIs." },
-  { name: "Node.js", color: "bg-brand-green", icon: "/nodejs.svg", details: "Server-side JavaScript runtime." },
+  { name: "Android", color: "bg-[#EA4335]", icon: "/android.svg", details: "Build amazing mobile apps with Android." },
+  { name: "Flutter", color: "bg-[#4285F4]", icon: "/flutter.svg", details: "Cross-platform UI toolkit for beautiful apps." },
+  { name: "Cloud", color: "bg-[#34A853]", icon: "/cloud.svg", details: "Powerful cloud computing & infrastructure." },
+  { name: "React", color: "bg-[#FFC727]", icon: "/react.svg", details: "JavaScript library for building UIs." },
+  { name: "Node.js", color: "bg-[#EA4335]", icon: "/nodejs.svg", details: "Server-side JavaScript runtime." },
 ];
 
 export function Tech() {
@@ -68,7 +68,7 @@ export function Tech() {
               <motion.div
                 key={t.name}
                 whileHover={{ y: -4 }}
-                className="snap-start min-w-[240px] flex-shrink-0 relative rounded-l-4xl rounded-r-4xl border-6 border-[#E1E1E1] dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg p-6 text-center"
+                className="snap-start min-w-[240px] flex-shrink-0 relative rounded-l-4xl rounded-r-4xl border-6 border-[#E1E1E1] dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl p-6 text-center text-[#5F5F5F] dark:text-gray-200 font-pt-sans-400  "
               >
                 <div
                   className={`absolute top-0 left-1/2 -translate-x-1/2 w-30 h-1 rounded-b-xl ${t.color}`}
