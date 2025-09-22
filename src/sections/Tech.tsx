@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion"; // Corrected import
 import { ChevronDown } from "lucide-react";
 
 const tech = [
@@ -8,8 +8,6 @@ const tech = [
   { name: "Cloud", color: "bg-brand-red", icon: "/cloud.svg", details: "Powerful cloud computing & infrastructure." },
   { name: "React", color: "bg-brand-blue", icon: "/react.svg", details: "JavaScript library for building UIs." },
   { name: "Node.js", color: "bg-brand-green", icon: "/nodejs.svg", details: "Server-side JavaScript runtime." },
-
-
 ];
 
 export function Tech() {
@@ -19,9 +17,9 @@ export function Tech() {
 
   useEffect(() => {
     const el = scrollRef.current;
-    if (!el || tech.length <= 3) return; 
+    if (!el || tech.length <= 3) return;
 
-    const step = 280 + 24; 
+    const step = 240 + 24;
     autoplayRef.current = setInterval(() => {
       if (!el) return;
 
@@ -49,16 +47,15 @@ export function Tech() {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto px-6">
-     
         <div className="flex items-center">
           <div className="h-1 flex-1 bg-[#FF6060]"></div>
-          <h2 className="mx-6 text-2xl font-semibold text-[#5F5F5F] font-pt-sans-700">
+          <h2 className="mx-6 text-2xl font-semibold text-[#5F5F5F] dark:text-gray-200 font-pt-sans-700">
             Technologies
           </h2>
           <div className="h-1 flex-1 bg-[#FF6060]"></div>
         </div>
 
-        <p className="text-center text-sm text-[#5F5F5F] mt-5">
+        <p className="text-center text-sm text-[#5F5F5F] dark:text-gray-300 mt-5">
           Domains That Excite Us to Collaborate and Teach!
         </p>
 
@@ -66,13 +63,12 @@ export function Tech() {
           ref={scrollRef}
           className={`mt-15 ${tech.length > 3 ? "overflow-x-auto scrollbar-hide snap-x" : ""}`}
         >
-    
           <div className={`flex space-x-6 ${tech.length <= 3 ? "justify-center" : ""}`}>
             {tech.map((t, index) => (
               <motion.div
                 key={t.name}
                 whileHover={{ y: -4 }}
-                className="snap-start min-w-[240px] flex-shrink-0 relative rounded-l-4xl rounded-r-4xl border-6 border-[#E1E1E1] dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg p-6 text-center"
+                className="snap-start min-w-[240px] flex-shrink-0 relative rounded-l-4xl rounded-r-4xl border-6 border-[#E1E1E1] dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg p-6 text-center"
               >
                 <div
                   className={`absolute top-0 left-1/2 -translate-x-1/2 w-30 h-1 rounded-b-xl ${t.color}`}
@@ -84,7 +80,7 @@ export function Tech() {
                 />
                 <div className="text-lg font-semibold">{t.name}</div>
                 <button
-                  className="mt-3 flex items-center justify-center w-full text-gray-500 hover:text-black transition"
+                  className="mt-3 flex items-center justify-center w-full text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition"
                   onClick={() => handleToggle(index)}
                 >
                   <ChevronDown

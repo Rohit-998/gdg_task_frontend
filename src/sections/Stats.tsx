@@ -23,10 +23,9 @@ export function Stats() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: i * 0.1 }}
-          className="flex flex-col items-center text-[#5F5F5F]"
+          className="flex flex-col items-center text-[#5F5F5F] dark:text-gray-200"
         >
           <svg className="w-24 h-24">
-          
             <circle
               cx="48"
               cy="48"
@@ -35,7 +34,6 @@ export function Stats() {
               strokeWidth="6"
               fill="none"
             />
-           
             {colors.map((c, idx) => (
               <circle
                 key={idx}
@@ -48,23 +46,22 @@ export function Stats() {
                 strokeDasharray={arcLength + " " + (circumference - arcLength)}
                 strokeDashoffset={-idx * arcLength}
                 strokeLinecap="round"
-                transform="rotate(-90 48 48)" 
+                transform="rotate(-90 48 48)"
               />
             ))}
-          
             <text
               x="50%"
               y="50%"
               dominantBaseline="middle"
               textAnchor="middle"
-              fill="#5F5F5F"
-              className="font-bold text-xl "
+              className="font-bold text-xl fill-[#5F5F5F] dark:fill-gray-200"
             >
               {it.value}
             </text>
           </svg>
-
-          <div className=" text-[#353535] mt-1 font-pt-sans-400 text-lg  ">{it.label}</div>
+          <div className="text-[#353535] dark:text-gray-100 mt-1 font-pt-sans-400 text-lg">
+            {it.label}
+          </div>
         </motion.div>
       ))}
     </div>

@@ -14,7 +14,6 @@ export function Hero() {
           alt="Google Developer Groups"
           className="h-10 sm:h-12 w-auto dark:hidden"
         />
-
         <img
           src="/gdgwhite.svg"
           alt="Google Developer Groups (Dark)"
