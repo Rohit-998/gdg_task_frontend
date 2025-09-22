@@ -1,24 +1,23 @@
 const Footer = () => {
   return (
     <footer id="contact" className="relative bg-gray-100 dark:bg-gray-900">
-      {/* Top Section */}
+      
       <div className="mx-auto max-w-6xl px-4 py-8 grid gap-6 lg:grid-cols-2 items-start">
         
-        {/* Left - Logo */}
+   
         <div className="flex justify-center lg:justify-start relative w-full">
           <img
             src="/footerLogo2.svg"
             alt="GDG Logo"
             className="w-36 md:w-52 lg:w-60 h-auto"
           />
-          {/* Divider line for large screens */}
+       
           <div className="hidden lg:block absolute top-0 right-0 h-full w-px bg-gray-400"></div>
         </div>
 
-        {/* Right - Address, Email & Socials */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left text-gray-700 dark:text-gray-300 leading-relaxed gap-4">
           
-          {/* Address */}
+   
           <div className="flex items-start gap-2">
             <img src="/location.svg" alt="Location" className="h-5 w-5 mt-1" />
             <div>
@@ -27,9 +26,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Email + Follow Us */}
+    
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-4">
-            {/* Email */}
+      
             <div className="flex items-center gap-2">
               <img src="/mail.svg" alt="Mail" className="h-5 w-5" />
               <a
@@ -40,7 +39,7 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Follow Us */}
+   
             <div className="flex flex-col items-center sm:items-start">
               <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-1">
                 Follow Us:
@@ -76,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom SVG Banner */}
+
       <div className="w-full overflow-hidden">
         <img
           src="/footer.svg"
