@@ -45,10 +45,17 @@ const items = [
     barClassName: "w-2 flex bg-[#F4B400] rounded-l-lg",
     Arrow: "/yellowArrow.svg",
   },
-  {
+ {
     id: "contact",
     question: "How to reach us?",
-    answer: "You can contact us at dsc-rbce@gmail.com",
+    answer: (
+      <>
+        You can contact us at{" "}
+        <a href="mailto:dsc-rbce@gmail.com" className="underline hover:text-blue-500">
+          dsc-rbce@gmail.com
+        </a>
+      </>
+    ),
     bar: "/redbar4.svg",
     AnsClassName:
       "flex-1 border-9 rounded-r-3xl md:rounded-r-3xl lg:py-5 lg:pl-5 lg:pr-3 md:py-1 md:pl-5 md:pr-2 pr-3 pl-3 py-3 text-sm text-gray-700 shadow-sm border-[#E1E1E1] lg:py-4 md:py-4 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300",

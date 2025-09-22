@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from "framer-motion"; // Corrected import
 type Item = {
   id: string;
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   bar: string;
   barClassName?: string;
   AnsClassName?: string;
   Arrow?: string;
+
 };
 
 export function Accordion({ items }: { items: Item[] }) {
