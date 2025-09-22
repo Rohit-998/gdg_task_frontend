@@ -13,7 +13,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 bg-white dark:bg-gray-900 shadow-md">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="GDG" className="h-5 w-auto" />
+          <a href="#home"><img src="/logo.svg" alt="GDG" className="h-5 w-auto" /></a>
           <span className="font-pt-sans-400 text-[#868686] dark:text-gray-400">GDG RCOEM</span>
         </div>
 
