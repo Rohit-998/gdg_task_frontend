@@ -23,7 +23,7 @@ export function Stats() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: i * 0.1 }}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center text-[#5F5F5F]"
         >
           <svg className="w-24 h-24">
           
@@ -57,13 +57,14 @@ export function Stats() {
               y="50%"
               dominantBaseline="middle"
               textAnchor="middle"
-              className="font-bold text-xl fill-gray-900"
+              fill="#5F5F5F"
+              className="font-bold text-xl "
             >
               {it.value}
             </text>
           </svg>
-         
-          <div className="text-sm text-gray-700 mt-1">{it.label}</div>
+
+          <div className=" text-[#353535] mt-1 font-pt-sans-400 text-lg  ">{it.label}</div>
         </motion.div>
       ))}
     </div>
