@@ -6,7 +6,7 @@ type Item = {
   question: string; 
   answer: string; 
   bar: string; 
-  barWidth?: number; 
+  barClassName?: string; 
   AnsClassName?: string; 
   Arrow?: string;
 };
@@ -56,17 +56,8 @@ export function Accordion({ items }: { items: Item[] }) {
                   transition={{ duration: 0.25 }}
                   className="flex px-4 sm:px-8 md:mx-20"
                 >
-                 
-                  <img
-                    src={it.bar}
-                    alt=""
-                    className={`
-                      w-[${it.barWidth ?? 6}px] 
-                      sm:w-[${(it.barWidth ?? 6) + 2}px] 
-                      md:w-[${(it.barWidth ?? 6) + 4}px] 
-                      lg:w-[${(it.barWidth ?? 6) + 6}px]
-                    `}
-                  />
+
+                  <div className={`${it.barClassName}`}></div>
 
                   <div
                     className={`${it.AnsClassName} text-justify sm:text-left`}
